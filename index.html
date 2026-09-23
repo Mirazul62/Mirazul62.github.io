@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mirazul Islam | Software Engineer-II</title>
+<meta name="description" content="Mirazul Islam — Software Engineer-II, Adjunct Lecturer, and researcher interested in reliable systems, software engineering, AI and machine learning.">
+<style>
+:root{
+  --bg:#f7f8fc;--surface:#fff;--text:#171923;--muted:#667085;--border:#e7e9ef;
+  --accent:#4f46e5;--accent2:#7c3aed;--soft:#eef2ff;--nav:rgba(255,255,255,.82);
+  --shadow:0 18px 50px rgba(20,24,40,.08);
+}
+[data-theme="dark"]{
+  --bg:#0b1020;--surface:#111827;--text:#f3f4f6;--muted:#a7afc0;--border:#263044;
+  --accent:#818cf8;--accent2:#a78bfa;--soft:#1b2340;--nav:rgba(11,16,32,.82);
+  --shadow:0 18px 50px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+line-height:1.7;color:var(--text);background:var(--bg);transition:background .25s,color .25s}
+a{color:inherit;text-decoration:none}.container{width:min(1080px,calc(100% - 40px));margin:auto}
+.progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));z-index:1000}
+.nav{position:sticky;top:0;z-index:100;background:var(--nav);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:800;letter-spacing:-.04em;font-size:19px}
+.nav-links{display:flex;gap:24px;align-items:center}.nav-links a{font-size:14px;color:var(--muted);position:relative}
+.nav-links a.active,.nav-links a:hover{color:var(--text)}
+.nav-links a.active:after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--accent);border-radius:2px}
+.icon-btn{border:1px solid var(--border);background:var(--surface);color:var(--text);width:40px;height:40px;border-radius:12px;cursor:pointer;font-size:17px}
+.hero{padding:100px 0 85px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--soft);filter:blur(5px);right:-150px;top:-150px;z-index:-1}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border-radius:999px;background:var(--soft);color:var(--accent);font-size:13px;font-weight:700;margin-bottom:18px}
+.dot{width:7px;height:7px;background:#22c55e;border-radius:50%;box-shadow:0 0 0 5px rgba(34,197,94,.12)}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.055em;max-width:850px}
+.gradient{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font-size:clamp(18px,2.5vw,23px);color:var(--muted);margin:22px 0 12px;max-width:760px}
+.typing{color:var(--text);font-weight:600;min-height:32px}
+.cursor{display:inline-block;width:2px;height:1em;background:var(--accent);vertical-align:-2px;animation:blink .8s infinite}
+@keyframes blink{50%{opacity:0}}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 18px;border-radius:12px;border:1px solid var(--border);font-weight:700;font-size:14px;transition:.2s;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--accent);color:white;border-color:var(--accent)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(79,70,229,.16)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:50px;max-width:760px}
+.stat{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+.stat strong{display:block;font-size:25px}.stat span{color:var(--muted);font-size:13px}
+section{padding:85px 0;border-top:1px solid var(--border)}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:35px}
+.section-kicker{font-size:12px;text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-weight:800}
+h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.04em;line-height:1.15}
+.lead{color:var(--muted);max-width:650px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:28px;box-shadow:var(--shadow)}
+.card h3{font-size:20px;margin-bottom:5px}.meta{color:var(--muted);font-size:13px;margin-bottom:15px}
+.card p{color:var(--muted)}.card ul{padding-left:20px;color:var(--muted)}.card li{margin:7px 0}
+.timeline{position:relative;margin-left:8px}.timeline:before{content:"";position:absolute;left:8px;top:8px;bottom:8px;width:1px;background:var(--border)}
+.timeline-item{position:relative;padding-left:38px;margin-bottom:30px}
+.timeline-item:before{content:"";position:absolute;left:2px;top:8px;width:13px;height:13px;border-radius:50%;background:var(--surface);border:3px solid var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:7px 11px;border:1px solid var(--border);background:var(--surface);border-radius:999px;font-size:13px;cursor:default;transition:.2s}
+.skill-group{margin-top:24px}.skill-group h3{font-size:15px;margin-bottom:12px}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:8px}
+.gallery-item{position:relative;overflow:hidden;border:1px solid var(--border);border-radius:18px;background:var(--surface);box-shadow:var(--shadow)}
+.gallery-item img{display:block;width:100%;height:260px;object-fit:cover;transition:transform .25s ease}
+.gallery-item:hover img{transform:scale(1.04)}
+.gallery-item figcaption{padding:12px 14px;font-size:13px;color:var(--muted);background:var(--surface)}
+.project{position:relative;overflow:hidden;cursor:pointer;transition:.25s}.project:hover{transform:translateY(-5px)}
+.project .arrow{position:absolute;right:24px;top:24px;font-size:20px;color:var(--muted)}
+.project small{color:var(--accent);font-weight:700}.project h3{margin:8px 0}.project p{font-size:14px}
+.footer{padding:50px 0;text-align:center;color:var(--muted);font-size:13px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease}.reveal.show{opacity:1;transform:none}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;padding:20px;z-index:500}
+.modal.open{display:flex}.modal-box{max-width:620px;width:100%;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:30px;box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.close{float:right}.modal-box h3{font-size:26px;margin-bottom:8px}.modal-box p{color:var(--muted)}
+@media(max-width:760px){
+ .container{width:min(100% - 28px,1080px)}.nav-links{display:none}.hero{padding:70px 0}
+ .grid,.project-grid,.gallery-grid{grid-template-columns:1fr}.stats{grid-template-columns:1fr}
+ .section-head{display:block}.section-head .lead{margin-top:12px}.card{padding:22px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{transition:none}.project,.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="logo" href="#">MI.</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#experience">Experience</a><a href="#research">Research</a>
+      <a href="#skills">Skills</a><a href="#projects">Projects</a>
+    </div>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">☾</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="eyebrow"><span class="dot"></span> Software Engineer-II · Lecturer</div>
+    <h1>Hi, I'm <span class="gradient">Mirazul Islam.</span></h1>
+    <p class="hero-sub">I build reliable software systems and teach the next generation of developers.</p>
+    <div class="typing"><span id="typed"></span><span class="cursor"></span></div>
+    <div class="actions">
+      <a class="btn primary" href="#projects">Explore my work →</a>
+      <a class="btn" href="mailto:miraz1607062@gmail.com">Let's connect</a>
+      <a class="btn" href="https://github.com/Mirazul62/CV/blob/main/CV_Mirazul%20Islam.pdf" target="_blank">View CV ↗</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><strong>4+</strong><span>Years in software engineering</span></div>
+      <div class="stat"><strong>600+</strong><span>Competitive programming problems</span></div>
+      <div class="stat"><strong>2025–</strong><span>Adjunct Lecturer</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about" class="reveal">
+  <div class="container">
+    <div class="section-head"><div><div class="section-kicker">01 · About</div><h2>Engineering with a research mindset.</h2></div>
+      <p class="lead">Software engineering, teaching, and an interest in dependable intelligent systems.</p></div>
+    <div class="grid">
+      <div class="card">
+        <p>I am a Software Engineer-II at DataPath Ltd. and an Adjunct Lecturer at Northern University Bangladesh. My professional work focuses on backend and full-stack development, APIs, databases, integrations, and distributed application components.</p><br>
+        <p>My undergraduate research focused on fault-tolerant computing and improving system reliability in the presence of soft errors. I am now interested in exploring the connection between dependable systems, software engineering, AI, and machine learning.</p>
+      </div>
+      <div class="card">
+        <h3>Currently</h3>
+        <div class="meta">What I spend my time on</div>
+        <ul>
+          <li>Building production software with .NET Core</li>
+          <li>Teaching Object-Oriented Programming</li>
+          <li>Exploring AI/ML and dependable systems</li>
+          <li>Learning and solving algorithmic problems</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="reveal">
+<div class="container">
+ <div class="section-head"><div><div class="section-kicker">02 · Experience</div><h2>Where I've worked.</h2></div></div>
+ <div class="timeline">
+  <div class="timeline-item"><div class="card"><h3>Software Engineer-II — DataPath Ltd.</h3><div class="meta">Jun. 2022 – Present · Dhaka, Bangladesh</div>
+  <ul><li>Develop backend and full-stack applications using .NET Core and related technologies.</li><li>Design REST APIs, database solutions, and third-party integrations.</li><li>Work with SQL Server, Redis, RabbitMQ, CI/CD, and distributed application components.</li><li>Apply Clean Architecture, SOLID, DDD, and unit testing.</li></ul></div></div>
+  <div class="timeline-item"><div class="card"><h3>Adjunct Lecturer — Northern University Bangladesh</h3><div class="meta">Jan. 2025 – Present</div>
+  <ul><li>Teach Object-Oriented Programming and advanced programming concepts.</li><li>Guide students through Java, software design, and practical programming projects.</li></ul></div></div>
+  <div class="timeline-item"><div class="card"><h3>Java Instructor — Eastern University, Dhaka </h3><div class="meta">Mar. 2025 –Jun. 2025</div>
+  <ul><li>Delivered intensive training on Java Spring Boot, RESTful Web Services, and Database 
+Integration to aspiring developers.</li></ul></div></div>
+  <div class="timeline-item"><div class="card"><h3>Workshop Facilitator — ICT Division, Government of Bangladesh</h3><div class="meta">Sept. 2025</div>
+  <ul><li>Conducted a 2-day professional workshop on Artificial Intelligence, fact-checking, data presentation, and advanced ICT at the sub-district level.</li><li>Trained participants in AI concepts, data literacy, and practical ICT applications, enhancing skills of local professionals and students.</li><li>Developed and delivered hands-on exercises, presentations, and interactive sessions, demonstrating leadership and teaching capability.</li></ul></div></div>
+  
+</div>
+</div>
+</section>
+
+<section id="research" class="reveal">
+<div class="container">
+ <div class="section-head"><div><div class="section-kicker">03 · Research</div><h2>From reliable systems to intelligent systems.</h2></div></div>
+ <div class="card">
+  <h3>Enhancing Flexible Unequal Error Control Method to Improve Soft Error Tolerance</h3>
+  <div class="meta">Undergraduate Thesis · KUET</div>
+  <p>Research on fault-tolerant computing and improving system reliability affected by soft errors, including algorithms for detecting and correcting multiple adjacent bit errors.</p>
+  <br><p><strong>Publication:</strong> Springer book chapter · <a class="gradient" href="https://doi.org/10.1007/978-981-33-4673-4_39" target="_blank">DOI ↗</a></p>
+ </div>
+</div>
+</section>
+
+<section id="skills" class="reveal">
+<div class="container">
+ <div class="section-head"><div><div class="section-kicker">04 · Skills</div><h2>Tools I work with.</h2></div></div>
+ <div class="card">
+  <div class="tags" id="tags">
+   <button class="tag" data-group="backend">C#</button><button class="tag" data-group="backend">.NET / .NET Core</button>
+   <button class="tag" data-group="backend">ASP.NET Core</button><button class="tag" data-group="frontend">Angular</button>
+   <button class="tag" data-group="frontend">Blazor</button><button class="tag" data-group="data">SQL Server</button>
+   <button class="tag" data-group="data">MySQL</button><button class="tag" data-group="data">MongoDB</button>
+   <button class="tag" data-group="infra">Redis</button><button class="tag" data-group="infra">RabbitMQ</button>
+   <button class="tag" data-group="lang">Java</button><button class="tag" data-group="lang">Python</button>
+   <button class="tag" data-group="lang">TypeScript</button><button class="tag" data-group="infra">CI/CD</button>
+   <button class="tag" data-group="design">Clean Architecture</button><button class="tag" data-group="design">DDD</button>
+   <button class="tag" data-group="design">SOLID</button><button class="tag" data-group="infra">Git</button>
+   <button class="tag" data-group="design">Azure</button><button class="tag" data-group="infra">AWS S3 Server</button>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="gallery" class="reveal">
+<div class="container">
+ <div class="section-head"><div><div class="section-kicker">05 · Gallery</div><h2>Selected moments.</h2></div></div>
+ <div class="gallery-grid">
+  <figure class="gallery-item">
+  <img src="Assets/Prof_1.jpg" alt="Workshop session">
+   <figcaption>Professional workshop session</figcaption>
+  </figure>
+  <figure class="gallery-item">
+  <img src="Assets/prof_2.jpg" alt="Workshop session 2">
+   <figcaption>Professional workshop session</figcaption>
+  </figure>
+  <figure class="gallery-item">
+  <img src="Assets/teaching.jpeg" alt="Teaching and mentoring">
+   <figcaption>Teaching and mentoring</figcaption>
+  </figure>
+  <figure class="gallery-item">
+  <img src="Assets/workshop.jpeg" alt="Workshop presentation">
+   <figcaption>Workshop presentation</figcaption>
+  </figure>
+ </div>
+</div>
+</section>
+
+<section id="projects" class="reveal">
+<div class="container">
+ <div class="section-head"><div><div class="section-kicker">06 · Projects</div><h2>Selected work.</h2></div></div>
+ <div class="project-grid">
+  <article class="card project" data-title="Payroll Integration Platform" data-body="A payroll integration platform involving third-party payroll providers, REST APIs, background processing, webhooks, caching, messaging, and database operations.">
+   <small>PROFESSIONAL</small><h3>Payroll Integration Platform</h3><p>Integrations · APIs · Webhooks · Messaging</p><span class="arrow">↗</span>
+  </article>
+  <article class="card project" data-title="Fault-Tolerant Computing Research" data-body="Undergraduate research focused on flexible unequal error control methods and improving system reliability in the presence of soft errors.">
+   <small>RESEARCH</small><h3>Fault-Tolerant Computing</h3><p>Error control · Reliability · Algorithms</p><span class="arrow">↗</span>
+  </article>
+ </div>
+</div>
+</section>
+</main>
+
+<footer class="footer"><div class="container">© 2026 Mirazul Islam · Built with HTML, CSS & JavaScript</div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+ <div class="modal-box"><button class="icon-btn close" id="closeModal" aria-label="Close">×</button><h3 id="modalTitle"></h3><p id="modalBody"></p></div>
+</div>
+
+<script>
+(() => {
+  const root=document.documentElement;
+  const themeBtn=document.getElementById('themeBtn');
+  const savedTheme=localStorage.getItem('theme');
+  if(savedTheme) root.dataset.theme=savedTheme;
+  const updateTheme=()=>themeBtn.textContent=root.dataset.theme==='dark'?'☀':'☾';
+  updateTheme();
+  themeBtn.addEventListener('click',()=>{
+    root.dataset.theme=root.dataset.theme==='dark'?'light':'dark';
+    localStorage.setItem('theme',root.dataset.theme); updateTheme();
+  });
+
+  const words=['Backend Development','.NET Core & Full-Stack Engineering','Reliable Software Systems','AI & Machine Learning'];
+  const typed=document.getElementById('typed'); let wi=0,ci=0,deleting=false;
+  function type(){
+    const word=words[wi]; typed.textContent=word.slice(0,ci);
+    if(!deleting && ci<word.length){ci++;setTimeout(type,65)}
+    else if(!deleting){deleting=true;setTimeout(type,1300)}
+    else if(ci>0){ci--;setTimeout(type,35)}
+    else{deleting=false;wi=(wi+1)%words.length;setTimeout(type,250)}
+  } type();
+
+  const progress=document.getElementById('progress');
+  addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-innerHeight;progress.style.width=(h>0?(scrollY/h)*100:0)+'%'},{passive:true});
+
+  const sections=[...document.querySelectorAll('section[id]')], links=[...document.querySelectorAll('.nav-links a')];
+  const observer=new IntersectionObserver(entries=>entries.forEach(e=>{
+    if(e.isIntersecting) links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+  }),{rootMargin:'-35% 0px -55% 0px'});
+  sections.forEach(s=>observer.observe(s));
+
+  const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(e=>reveal.observe(e));
+
+  const modal=document.getElementById('modal'), title=document.getElementById('modalTitle'), body=document.getElementById('modalBody');
+  document.querySelectorAll('.project').forEach(p=>p.addEventListener('click',()=>{
+    title.textContent=p.dataset.title; body.textContent=p.dataset.body; modal.classList.add('open');
+  }));
+  const close=()=>modal.classList.remove('open');
+  document.getElementById('closeModal').addEventListener('click',close);
+  modal.addEventListener('click',e=>{if(e.target===modal)close()});
+  addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+})();
+</script>
+</body>
+</html>
